@@ -4,217 +4,199 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Мурнорка — Тепло, которое не кусалось</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Golos+Text:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== ШАПКА САЙТА ===== -->
-<!-- Ссылки сами перенесутся на новую строку на маленьком экране, -->
-<!-- поэтому мобильное меню (гамбургер) и JS нам не нужны. -->
-<header class="header">
-  <div class="wrap header-row">
-
+<!-- Шапка сайта: логотип, меню и иконки. Всё лежит в одном ряду
+     и само переносится на новую строку, если места не хватает. -->
+<header>
+  <div class="row">
     <a href="#top" class="logo">Мурнорка</a>
 
-    <nav class="nav">
-      <a href="#collections">Коллекции</a>
-      <a href="#showrooms">Адреса шоурумов</a>
-      <a href="#atelier">Ателье</a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#collections">Коллекции</a></li>
+        <li><a href="#showrooms">Адреса шоурумов</a></li>
+        <li><a href="#atelier">Ателье</a></li>
+      </ul>
     </nav>
 
+    <div class="icons">
+      <a href="#" aria-label="Поиск">🔍</a>
+      <a href="#" aria-label="Избранное">♡</a>
+      <a href="#" aria-label="Корзина">🛒</a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- ===== ГЛАВНЫЙ ЭКРАН (HERO) ===== -->
-  <section class="wrap hero">
-    <div class="hero-text">
-      <p class="eyebrow">Для тех, у кого всегда зреет мечта о меховой шапке — поэтому мы просто взяли и сделали её этичной.</p>
-      <h1 class="title">Мурнорка</h1>
-      <p class="subtitle">Тепло, которое не кусалось</p>
-      <p>«Мурнорка» запустила коллекцию «Second Nature» в 2026 году. И этим сделала стиль casual chic доступным для каждого человека, не оставляя компромиссов между этикой и стилем.</p>
-    </div>
-    <div class="hero-image">
-      <img src="images/hero.jpg" alt="Модель в меховой шапке коллекции «Мурнорка»">
+  <!-- Главный блок: текст слева, фото справа -->
+  <section>
+    <div class="row">
+      <div class="col">
+        <p class="eyebrow">Для тех, у кого всегда зреет мечта о меховой шапке — поэтому мы просто взяли и сделали её этичной.</p>
+        <h1>Мурнорка</h1>
+        <p class="subtitle">Тепло, которое не кусалось</p>
+        <p>«Мурнорка» запустила коллекцию «Second Nature» в 2026 году. И этим сделала стиль casual chic доступным для каждого человека, не оставляя компромиссов между этикой и стилем.</p>
+      </div>
+
+      <!-- Замените картинку на своё фото: images/hero.jpg -->
+      <img class="photo" src="images/hero.jpg" alt="Модель в меховой шапке коллекции «Мурнорка»">
     </div>
   </section>
 
-  <!-- ===== ПРЕИМУЩЕСТВА ЭКОМЕХА ===== -->
-  <section id="collections" class="wrap section">
-    <h2>Преимущества экомеха в сравнении с натуральным</h2>
-    <p>Полое волокно удерживает воздух лучше натурального — экомех и греет сильнее, и весит на десяток килограммов меньше.</p>
-    <p>О дорогой химчистке можно забыть. Экомех не боится машинки и не теряет форму.</p>
-    <p>Экомех красится в любой цвет и не портится. Капюшон из розового леопарда? Легко.</p>
+  <!-- Сравнение экомеха и натурального -->
+  <section id="collections">
+    <div class="row">
+      <h2>преимущества экомеха в сравнении с натуральным</h2>
+      <div class="col">
+        <p>Полое волокно удерживает воздух лучше натурального — экомех и греет сильнее, и весит на десяток килограммов меньше.</p>
+        <p>О дорогой химчистке можно забыть. Экомех не боится машинки и не теряет форму.</p>
+        <p>Экомех красится в любой цвет и не портится. Капюшон из розового леопарда? Легко.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- ===== ХИТЫ ПРОДАЖ ===== -->
-  <section class="wrap section">
-    <div class="grid">
-
+  <!-- Два товара-примера -->
+  <section>
+    <div class="cards">
       <article class="card">
-        <img class="card-image" src="images/god-tigra.jpg" alt="Шапка «Год тигра» с тигровым принтом">
+        <img src="images/god-tigra.jpg" alt="Шапка «Год тигра» с тигровым принтом">
         <h3>«Год тигра»</h3>
-        <p class="price">11 800 ₽</p>
+        <p class="price">11800 ₽</p>
         <p>Для ярких тигров, тигриц и их тигрят.</p>
       </article>
 
       <article class="card">
-        <img class="card-image" src="images/andergraund.jpg" alt="Шапка «Знаю толк в андеграунде» с леопардовым принтом">
+        <img src="images/andergraund.jpg" alt="Шапка «Знаю толк в андеграунде» с леопардовым принтом">
         <h3>«Знаю толк в андеграунде»</h3>
-        <p class="price">9 000 ₽</p>
+        <p class="price">9000 ₽</p>
         <p>Когда нужно разбавить тусу капелькой стиля.</p>
       </article>
-
     </div>
   </section>
 
-  <!-- ===== ИСТОРИЯ КОЛЛЕКЦИИ ===== -->
-  <section class="wrap section">
-    <h2 class="title">Second Nature: твоё дикое сердце</h2>
-    <p>Зверь — вторая природа человека: то дикое и настоящее, что в нас осталось. Эта двойственность шапки коллекции «Second Nature» — желание сохранить грацию зверя, не трогая самого зверя.</p>
-    <p>Для этой коллекции мы выбрали животных холодных регионов России — чернобурую лису, рысь и снежного барса. Их окрас и повадки стали основой для расцветок и фактур, а дизайнеры «Мурнорки» перевели это в современный крой.</p>
+  <!-- Рассказ про коллекцию Second Nature -->
+  <section>
+    <div class="text-block">
+      <h2>Second Nature: твоё дикое сердце</h2>
+      <p>Зверь — вторая природа человека: то дикое и настоящее, что в нас осталось. Эта двойственность шапки коллекции «Second Nature» — желание сохранить грацию зверя, не трогая самого зверя.</p>
+      <p>Для этой коллекции мы выбрали животных холодных регионов России — чернобурую лису, рысь и снежного барса. Их окрас и повадки стали основой для расцветок и фактур, а дизайнеры «Мурнорки» перевели это в современный крой.</p>
+    </div>
   </section>
 
-  <!-- ===== ДЛЯ ЖЕНЩИН ===== -->
-  <section class="wrap section">
+  <!-- Женские шапки -->
+  <section>
     <h2>Для женщин</h2>
-    <div class="grid">
-
+    <div class="cards">
       <article class="card">
-        <img class="card-image" src="images/letuchaya-lisica.jpg" alt="Шапка-шлем «Летучая лисица»">
-        <div class="dots">
-          <span class="dot dot-1"></span>
-          <span class="dot dot-2"></span>
-          <span class="dot dot-3"></span>
-        </div>
+        <img src="images/letuchaya-lisica.jpg" alt="Шапка-шлем «Летучая лисица»">
         <h3>«Летучая лисица»</h3>
-        <p class="price">12 000 ₽</p>
+        <p class="price">12000 ₽</p>
         <p>Кашемировый шлем с подкладкой из меха и кожаными вставками.</p>
       </article>
 
       <article class="card">
-        <img class="card-image" src="images/kupecheskaya-laska.jpg" alt="Шапка-шарик «Купеческая ласка»">
-        <div class="dots">
-          <span class="dot dot-2"></span>
-          <span class="dot dot-3"></span>
-          <span class="dot dot-1"></span>
-        </div>
+        <img src="images/kupecheskaya-laska.jpg" alt="Шапка-шарик «Купеческая ласка»">
         <h3>«Купеческая ласка»</h3>
-        <p class="price">6 000 ₽</p>
+        <p class="price">6000 ₽</p>
         <p>Шапка-шарик с комфортной посадкой без лишнего объёма.</p>
       </article>
 
       <article class="card">
-        <img class="card-image" src="images/lesnaya-baseball.jpg" alt="Кепка «Лесная бейсболистка»">
-        <div class="dots">
-          <span class="dot dot-3"></span>
-          <span class="dot dot-1"></span>
-          <span class="dot dot-2"></span>
-        </div>
+        <img src="images/lesnaya-baseball.jpg" alt="Кепка «Лесная бейсболистка»">
         <h3>«Лесная бейсболистка»</h3>
-        <p class="price">4 000 ₽</p>
+        <p class="price">4000 ₽</p>
         <p>Поможет завершить образ спорт-шик или идеально впишется к классической длинной шубе. Короткий мех 1–2 см.</p>
       </article>
 
       <article class="card">
-        <img class="card-image" src="images/sobolya-kosynka.jpg" alt="Капюшон-косынка «Собольня косынка»">
-        <div class="dots">
-          <span class="dot dot-1"></span>
-          <span class="dot dot-3"></span>
-          <span class="dot dot-2"></span>
-        </div>
+        <img src="images/sobolya-kosynka.jpg" alt="Капюшон-косынка «Собольня косынка»">
         <h3>«Собольня косынка»</h3>
-        <p class="price">9 000 ₽</p>
+        <p class="price">9000 ₽</p>
         <p>Роскошный капюшон из крупных полос подойдёт тем, кто ищет олдскул.</p>
       </article>
-
     </div>
   </section>
 
-  <!-- ===== ДЛЯ МУЖЧИН ===== -->
-  <section id="atelier" class="wrap section">
+  <!-- Мужские шапки -->
+  <section id="atelier">
     <h2>Для мужчин</h2>
-    <div class="grid">
-
+    <div class="cards">
       <article class="card">
-        <img class="card-image" src="images/ugolniy-pesec.jpg" alt="Шапка-панама «Угольный песец»">
-        <div class="dots">
-          <span class="dot dot-1"></span>
-          <span class="dot dot-2"></span>
-          <span class="dot dot-3"></span>
-        </div>
+        <img src="images/ugolniy-pesec.jpg" alt="Шапка-панама «Угольный песец»">
         <h3>«Угольный песец»</h3>
-        <p class="price">4 000 ₽</p>
+        <p class="price">4000 ₽</p>
         <p>Если в вас всегда зрела мечта о меховой панаме — понимаем. Поэтому мы просто взяли и сделали такую. Почувствуйте себя профессиональным городским охотником.</p>
       </article>
 
       <article class="card">
-        <img class="card-image" src="images/drovosek-mha.jpg" alt="Шапка-ушанка «Дровосек мха»">
+        <img src="images/drovosek-mha.jpg" alt="Шапка-ушанка «Дровосек мха»">
         <h3>«Дровосек мха»</h3>
-        <p class="price">8 000 ₽</p>
+        <p class="price">8000 ₽</p>
         <p>Для тех, кому хочется слиться с природой даже оттенком.</p>
       </article>
 
       <article class="card">
-        <img class="card-image" src="images/uho-barsa.jpg" alt="Шапка-ушанка «Ухо барса» с принтом снежного барса">
+        <img src="images/uho-barsa.jpg" alt="Шапка-ушанка «Ухо барса» с принтом снежного барса">
         <h3>«Ухо барса»</h3>
-        <p class="price">6 500 ₽</p>
+        <p class="price">6500 ₽</p>
         <p>Классика с плотными отложными наушниками.</p>
       </article>
-
     </div>
   </section>
 
-  <!-- ===== ДЛЯ ДЕТЕЙ ===== -->
-  <section id="showrooms" class="wrap section">
+  <!-- Детские шапки -->
+  <section id="showrooms">
     <h2>Для детей</h2>
-    <div class="grid">
-
+    <div class="cards">
       <article class="card">
-        <img class="card-image" src="images/saharniy-umka.jpg" alt="Детская шапка «Сахарный Умка»">
+        <img src="images/saharniy-umka.jpg" alt="Детская шапка «Сахарный Умка»">
         <h3>«Сахарный Умка»</h3>
-        <p class="price">5 000 ₽</p>
+        <p class="price">5000 ₽</p>
         <p>Экстрамягкая имитация кролика, чтобы ребёнок ждал повода надеть шапку на прогулку.</p>
       </article>
 
       <article class="card">
-        <img class="card-image" src="images/slivochniy-volchonok.jpg" alt="Детская шапка «Сливочный волчонок»">
+        <img src="images/slivochniy-volchonok.jpg" alt="Детская шапка «Сливочный волчонок»">
         <h3>«Сливочный волчонок»</h3>
-        <p class="price">3 500 ₽</p>
+        <p class="price">3500 ₽</p>
         <p>В этой объёмной модели, скроенной специально для детей, так и хочется поиграть в северной экспедиции!</p>
       </article>
-
     </div>
   </section>
 
 </main>
 
-<!-- ===== ПОДВАЛ САЙТА ===== -->
-<footer class="footer">
-  <div class="wrap footer-row">
-
-    <div class="footer-block">
-      <p class="title">Мурнорка</p>
-      <p>© 2026</p>
+<!-- Подвал сайта: адрес, ссылки и соцсети -->
+<footer>
+  <div class="row">
+    <div class="col">
+      <p class="logo">© Мурнорка 2026</p>
       <p>Москва, ул. Меховая, 17</p>
       <p>murnorka.atelier.ru</p>
       <p>+7 499 333-33-33</p>
     </div>
 
-    <div class="footer-block">
-      <p class="footer-title">Оплата и гарантии</p>
-      <a href="#">Возврат и гарантии</a>
-    </div>
+    <ul>
+      <li><strong>Оплата и гарантии</strong></li>
+      <li><a href="#">Возврат и гарантии</a></li>
+    </ul>
 
-    <div class="footer-block">
-      <p class="footer-title">Контакты</p>
-      <a href="#">Стать партнёром</a>
-    </div>
+    <ul>
+      <li><strong>Контакты</strong></li>
+      <li><a href="#">Стать партнёром</a></li>
+    </ul>
 
+    <ul class="social">
+      <li><a href="#">VK</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">TikTok</a></li>
+      <li><a href="#">YouTube</a></li>
+    </ul>
   </div>
 </footer>
 

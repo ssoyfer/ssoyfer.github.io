@@ -1,232 +1,197 @@
-/* =========================================
-   МУРНОРКА — простые стили для новичков
-   Используем только flexbox.
-   Никаких CSS-переменных, clamp() и медиазапросов —
-   всё адаптируется само за счёт flex-wrap.
-   ========================================= */
-
+/* Общие настройки для всей страницы */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: 'Golos Text', sans-serif;
-  color: #2b2b2b;
+  margin: 0;
+  font-family: 'Golos Text', Arial, sans-serif;
+  font-size: 17px;
   line-height: 1.5;
+  color: #1a1a1a;
+  background: #f5f4f2;
 }
 
-.title {
-  font-family: 'Playfair Display', serif;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-/* Общая обёртка с отступами по бокам и максимальной шириной */
-.wrap {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Отступ сверху/снизу у обычных секций */
-.section {
-  padding-top: 40px;
-  padding-bottom: 40px;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Заголовки. Раз задаём цвет и шрифт — и он работает для всех h1 и h2 сразу */
+h1, h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #596081;
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 1.05;
 }
 
 h2 {
-  margin-bottom: 16px;
-  font-size: 28px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.25rem;
 }
 
 p {
-  margin-bottom: 10px;
+  margin: 0 0 1rem;
 }
 
-
-/* =========================================
-   ШАПКА САЙТА
-   Логотип и ссылки лежат в одну строку,
-   а если места не хватает — переносятся сами
-   благодаря flex-wrap.
-   ========================================= */
-
-.header {
-  background: #1e1e1e;
-  color: #fff;
+p:last-child {
+  margin-bottom: 0;
 }
 
-.header-row {
+/* Отступы у каждой секции сверху и снизу */
+section {
+  padding: 3rem 0;
+}
+
+/* Общий контейнер: не даёт контенту растягиваться шире 1000px */
+header .row,
+section .row,
+section .text-block,
+section h2,
+section .cards,
+footer .row {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== Главный приём для адаптива =====
+   .row — это ряд из блоков, которые лежат рядом на широком экране
+   и сами переносятся друг под друга, если экран узкий. */
+.row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 2rem;
+}
+
+.row > * {
+  flex: 1 1 300px;
+}
+
+/* Шапка сайта */
+header {
+  background: #f5f4f2;
+  border-bottom: 1px solid #dedcd6;
+}
+
+header .row {
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+header .row > * {
+  flex: 0 1 auto;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  color: #fff;
-  text-decoration: none;
+  font-size: 1.2rem;
+  color: #596081;
 }
 
-.nav {
+nav {
+  flex: 1 1 auto;
+}
+
+.nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
+.nav-list a:hover {
+  color: #596081;
 }
 
-.nav a:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================================
-   ГЛАВНЫЙ ЭКРАН (HERO)
-   Текст и картинка лежат рядом,
-   на узком экране картинка уходит вниз.
-   ========================================= */
-
-.hero {
+.icons {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  gap: 1rem;
+  font-size: 1.3rem;
 }
 
-.hero-text {
-  flex: 1 1 350px;
-}
-
-.hero-image {
-  flex: 1 1 350px;
-}
-
-.hero-image img {
+/* Фото — задаём одинаковую пропорцию, чтобы карточки не прыгали
+   даже до того, как вы вставите свою картинку */
+.photo,
+.card img {
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #e7e3d8;
+  margin-bottom: 0.75rem;
 }
 
+/* Мелкий текст над главным заголовком */
 .eyebrow {
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  color: #777;
-  margin-bottom: 12px;
-}
-
-.hero .title {
-  font-size: 48px;
-  margin-bottom: 6px;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 .subtitle {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 1.15rem;
 }
 
-
-/* =========================================
-   КАРТОЧКИ ТОВАРОВ
-   Карточки лежат в ряд и переносятся сами,
-   если не помещаются в ширину экрана.
-   ========================================= */
-
-.grid {
+/* Карточки товаров */
+.cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 2rem;
 }
 
 .card {
   flex: 1 1 260px;
 }
 
-.card-image {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  border-radius: 8px;
-  background: #e4e0da;
-  margin-bottom: 12px;
-}
-
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 4px;
-}
-
 .price {
+  color: #596081;
   font-weight: 700;
-  margin-bottom: 6px;
 }
 
-/* Цветные точки под некоторыми карточками —
-   всего три оттенка, которые повторяются */
-.dots {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
+/* Блок с текстом про коллекцию Second Nature */
+.text-block {
+  max-width: 640px;
 }
 
-.dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+/* Подвал сайта */
+footer {
+  background: #596081;
+  color: #f2f0f7;
 }
 
-.dot-1 { background: #5b4636; }
-.dot-2 { background: #b06a3c; }
-.dot-3 { background: #d8c9a3; }
-
-
-/* =========================================
-   ПОДВАЛ САЙТА
-   Блоки лежат в ряд и переносятся сами.
-   ========================================= */
-
-.footer {
-  background: #1e1e1e;
-  color: #ddd;
-  margin-top: 40px;
-}
-
-.footer-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.footer-block {
+footer .row > * {
   flex: 1 1 200px;
 }
 
-.footer-title {
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.footer-block a {
-  color: #ddd;
-  text-decoration: none;
-  display: block;
-}
-
-.footer-block a:hover {
+footer a:hover {
   text-decoration: underline;
+}
+
+footer .social {
+  display: flex;
+  gap: 1rem;
 }
