@@ -12,6 +12,16 @@ body {
   background: #f5f4f2;
 }
 
+/* Ruda — крупные заголовки и логотип */
+h1, h2, .logo {
+  font-family: 'Ruda', Arial, sans-serif;
+}
+
+/* Manrope — названия товаров, цены, меню, ссылки */
+h3, .price, nav a, .icons a, footer strong, footer a, .subtitle {
+  font-family: 'Manrope', Arial, sans-serif;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -30,7 +40,7 @@ ul {
 
 /* Заголовки. Раз задаём цвет и шрифт — и он работает для всех h1 и h2 сразу */
 h1, h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
   color: #596081;
   margin: 0 0 1rem;
 }
@@ -46,6 +56,7 @@ h2 {
 }
 
 h3 {
+  font-weight: 700;
   font-size: 1.15rem;
   margin: 0 0 0.25rem;
 }
@@ -107,9 +118,11 @@ header .row > * {
 }
 
 .logo {
-  font-family: 'Playfair Display', Georgia, serif;
+  display: flex;
+  flex-direction: column;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.05;
   color: #596081;
 }
 
@@ -134,7 +147,9 @@ nav {
 }
 
 /* Фото — задаём одинаковую пропорцию, чтобы карточки не прыгали
-   даже до того, как вы вставите свою картинку */
+   даже до того, как вы вставите свою картинку.
+   Классы ph-wide / ph-tall / ph-long меняют только пропорцию,
+   как на макете — где-то фото шире, где-то выше. */
 .photo,
 .card img {
   width: 100%;
@@ -144,6 +159,28 @@ nav {
   background: #e7e3d8;
   margin-bottom: 0.75rem;
 }
+
+.ph-wide { aspect-ratio: 4 / 3.2; }
+.ph-tall { aspect-ratio: 3 / 4.2; }
+.ph-long { aspect-ratio: 3 / 4.8; }
+
+/* Маленькие цветные точки под фото — варианты расцветки */
+.dots {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.dot-a { background: #2c2a28; }
+.dot-b { background: #b5502c; }
+.dot-c { background: #d8cdb8; }
+.dot-d { background: #5c6b45; }
 
 /* Мелкий текст над главным заголовком */
 .eyebrow {

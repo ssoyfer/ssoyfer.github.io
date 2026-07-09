@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Мурнорка — Тепло, которое не кусалось</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Golos+Text:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ruda:wght@600;700&family=Manrope:wght@500;600;700;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,10 @@
      и само переносится на новую строку, если места не хватает. -->
 <header>
   <div class="row">
-    <a href="#top" class="logo">Мурнорка</a>
+    <a href="#top" class="logo">
+      <span>Мур</span>
+      <span>норка</span>
+    </a>
 
     <nav>
       <ul class="nav-list">
@@ -36,7 +39,7 @@
   <!-- Главный блок: текст слева, фото справа -->
   <section>
     <div class="row">
-      <div class="col">
+      <div>
         <p class="eyebrow">Для тех, у кого всегда зреет мечта о меховой шапке — поэтому мы просто взяли и сделали её этичной.</p>
         <h1>Мурнорка</h1>
         <p class="subtitle">Тепло, которое не кусалось</p>
@@ -52,7 +55,7 @@
   <section id="collections">
     <div class="row">
       <h2>преимущества экомеха в сравнении с натуральным</h2>
-      <div class="col">
+      <div>
         <p>Полое волокно удерживает воздух лучше натурального — экомех и греет сильнее, и весит на десяток килограммов меньше.</p>
         <p>О дорогой химчистке можно забыть. Экомех не боится машинки и не теряет форму.</p>
         <p>Экомех красится в любой цвет и не портится. Капюшон из розового леопарда? Легко.</p>
@@ -64,14 +67,14 @@
   <section>
     <div class="cards">
       <article class="card">
-        <img src="images/god-tigra.jpg" alt="Шапка «Год тигра» с тигровым принтом">
+        <img class="ph-wide" src="images/god-tigra.jpg" alt="Шапка «Год тигра» с тигровым принтом">
         <h3>«Год тигра»</h3>
         <p class="price">11800 ₽</p>
         <p>Для ярких тигров, тигриц и их тигрят.</p>
       </article>
 
       <article class="card">
-        <img src="images/andergraund.jpg" alt="Шапка «Знаю толк в андеграунде» с леопардовым принтом">
+        <img class="ph-wide" src="images/andergraund.jpg" alt="Шапка «Знаю толк в андеграунде» с леопардовым принтом">
         <h3>«Знаю толк в андеграунде»</h3>
         <p class="price">9000 ₽</p>
         <p>Когда нужно разбавить тусу капелькой стиля.</p>
@@ -93,7 +96,8 @@
     <h2>Для женщин</h2>
     <div class="cards">
       <article class="card">
-        <img src="images/letuchaya-lisica.jpg" alt="Шапка-шлем «Летучая лисица»">
+        <img class="ph-tall" src="images/letuchaya-lisica.jpg" alt="Шапка-шлем «Летучая лисица»">
+        <ul class="dots"><li class="dot dot-a"></li><li class="dot dot-b"></li><li class="dot dot-c"></li></ul>
         <h3>«Летучая лисица»</h3>
         <p class="price">12000 ₽</p>
         <p>Кашемировый шлем с подкладкой из меха и кожаными вставками.</p>
@@ -101,6 +105,7 @@
 
       <article class="card">
         <img src="images/kupecheskaya-laska.jpg" alt="Шапка-шарик «Купеческая ласка»">
+        <ul class="dots"><li class="dot dot-b"></li><li class="dot dot-c"></li><li class="dot dot-d"></li></ul>
         <h3>«Купеческая ласка»</h3>
         <p class="price">6000 ₽</p>
         <p>Шапка-шарик с комфортной посадкой без лишнего объёма.</p>
@@ -108,13 +113,15 @@
 
       <article class="card">
         <img src="images/lesnaya-baseball.jpg" alt="Кепка «Лесная бейсболистка»">
+        <ul class="dots"><li class="dot dot-a"></li><li class="dot dot-d"></li><li class="dot dot-c"></li></ul>
         <h3>«Лесная бейсболистка»</h3>
         <p class="price">4000 ₽</p>
         <p>Поможет завершить образ спорт-шик или идеально впишется к классической длинной шубе. Короткий мех 1–2 см.</p>
       </article>
 
       <article class="card">
-        <img src="images/sobolya-kosynka.jpg" alt="Капюшон-косынка «Собольня косынка»">
+        <img class="ph-long" src="images/sobolya-kosynka.jpg" alt="Капюшон-косынка «Собольня косынка»">
+        <ul class="dots"><li class="dot dot-d"></li><li class="dot dot-b"></li><li class="dot dot-a"></li></ul>
         <h3>«Собольня косынка»</h3>
         <p class="price">9000 ₽</p>
         <p>Роскошный капюшон из крупных полос подойдёт тем, кто ищет олдскул.</p>
@@ -127,7 +134,8 @@
     <h2>Для мужчин</h2>
     <div class="cards">
       <article class="card">
-        <img src="images/ugolniy-pesec.jpg" alt="Шапка-панама «Угольный песец»">
+        <img class="ph-tall" src="images/ugolniy-pesec.jpg" alt="Шапка-панама «Угольный песец»">
+        <ul class="dots"><li class="dot dot-a"></li><li class="dot dot-b"></li><li class="dot dot-c"></li></ul>
         <h3>«Угольный песец»</h3>
         <p class="price">4000 ₽</p>
         <p>Если в вас всегда зрела мечта о меховой панаме — понимаем. Поэтому мы просто взяли и сделали такую. Почувствуйте себя профессиональным городским охотником.</p>
@@ -142,6 +150,7 @@
 
       <article class="card">
         <img src="images/uho-barsa.jpg" alt="Шапка-ушанка «Ухо барса» с принтом снежного барса">
+        <ul class="dots"><li class="dot dot-c"></li><li class="dot dot-b"></li></ul>
         <h3>«Ухо барса»</h3>
         <p class="price">6500 ₽</p>
         <p>Классика с плотными отложными наушниками.</p>
@@ -174,7 +183,7 @@
 <!-- Подвал сайта: адрес, ссылки и соцсети -->
 <footer>
   <div class="row">
-    <div class="col">
+    <div>
       <p class="logo">© Мурнорка 2026</p>
       <p>Москва, ул. Меховая, 17</p>
       <p>murnorka.atelier.ru</p>
